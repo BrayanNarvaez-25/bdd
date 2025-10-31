@@ -23,5 +23,3 @@ insert into productos(codigo,nombre,descripcion,precio,stock)
 values (277,'Pantalon','',8.63,17)
 
 select * from productos
-
-select codigo,nombre,precio from productos

@@ -1,4 +1,3 @@
-
 create table videojuegos(
 	codigo int not null,
 	nombre varchar(100) not null,
@@ -15,13 +14,5 @@ values(2,'Clash Royale','',10)
 
 insert into videojuegos(codigo,nombre,descripcion,valoracion)
 values(3,'Mario Bross','Clasico',10)
-
-insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(4,'FIFA','',10)
-
-insert into videojuegos(codigo,nombre,descripcion,valoracion)
-values(5,'GTA','',10)
-
-select * from videojuegos
 
 select codigo,nombre,valoracion from videojuegos
