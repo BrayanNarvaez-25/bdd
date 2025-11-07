@@ -24,3 +24,15 @@ values ('1334243243','Pepe','Menedoza',1.60,'04/10/2025','12:35',500.54,3)
 select cedula,nombre,numero_hijos,estatura from personas
 
 select * from personas
+
+update personas set estatura = 1.70
+where cedula = '1727392035'
+
+update personas set cantidad_ahorrada = 0.0
+where cantidad_ahorrada is null
+
+update personas set numero_hijos = 0
+where numero_hijos is null
+
+update personas set estatura = 1.80, fecha_nacimiento = '10/10/2025'
+where cedula = '1727392035'
