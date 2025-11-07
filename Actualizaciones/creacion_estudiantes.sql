@@ -31,8 +31,10 @@ values('2827475830','Keylor','Navas','prueba@gmail.com','17/11/2007')
 insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
 values('2847575802','David','Rosero','prueba@gmail.com','16/11/2007')
 
+insert into estudiantes(cedula,nombre,apellido,email,fecha_nacimiento)
+values('2847575805','David','Rosero','prueba@gmail.com','16/11/2007')
+
 select * from estudiantes
 
 update estudiantes set apellido = 'Hernández'
 where cedula like '17%'
-

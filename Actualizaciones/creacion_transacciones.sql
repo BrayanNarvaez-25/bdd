@@ -41,6 +41,9 @@ values(10,'21212',300.00,'D','10/05/2025','10:43')
 insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
 values(11,'21212',300.00,'D','10/09/2025','16:43')
 
+insert into transacciones(codigo,numero_cuenta,monto,tipo,fecha,hora)
+values(12,'21212',300.00,'D','10/08/2025','16:43')
+
 select * from transacciones
 
 update transacciones set tipo = 'T'

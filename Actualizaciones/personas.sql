@@ -36,3 +36,9 @@ where numero_hijos is null
 
 update personas set estatura = 1.80, fecha_nacimiento = '10/10/2025'
 where cedula = '1727392035'
+
+delete from personas 
+where cedula = '1234567890'
+
+delete from personas
+where estatura is null
