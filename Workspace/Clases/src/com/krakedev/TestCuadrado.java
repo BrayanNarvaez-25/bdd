@@ -14,7 +14,7 @@ public class TestCuadrado {
 		int areaC3;
 		int perC3;
 		
-		c1.lado = 5;
+		c1.setLado(5);
 		areaC1 = c1.calcularArea();
 		System.out.println("El area del c1 es: "+areaC1);
 		perC1 = c1.calcularPerimetro();
@@ -22,7 +22,7 @@ public class TestCuadrado {
 		
 		System.out.println("************");
 		
-		c2.lado = 8;
+		c2.setLado(8); 
 		areaC2 = c2.calcularArea();
 		System.out.println("El area del c2 es: "+areaC2);
 		perC2 = c2.calcularPerimetro();
@@ -30,7 +30,7 @@ public class TestCuadrado {
 		
 		System.out.println("************");
 		
-		c3.lado = 9;
+		c3.setLado(9);
 		areaC3 = c3.calcularArea();
 		System.out.println("El area del c3 es: "+areaC3);
 		perC3 = c3.calcularPerimetro();

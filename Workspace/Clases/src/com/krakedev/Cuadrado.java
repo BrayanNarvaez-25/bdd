@@ -2,7 +2,7 @@ package com.krakedev;
 
 public class Cuadrado {
 	
-	public int lado;
+	private int lado;
 	
 	public int calcularArea () {
 		int resultado = lado * lado;
@@ -13,4 +13,14 @@ public class Cuadrado {
 		int resultado = lado * 4;
 		return resultado;
 	}
+
+	public int getLado() {
+		return lado;
+	}
+
+	public void setLado(int lado) {
+		this.lado = lado;
+	}
+	
+	
 }
