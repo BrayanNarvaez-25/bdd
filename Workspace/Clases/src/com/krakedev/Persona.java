@@ -4,6 +4,21 @@ public class Persona {
 	private String nombre;
 	private int edadPersona;
 	private double estatura;
+	
+	public Persona() {
+		System.out.println("Ingresa el constructor");
+	}
+	
+	public Persona(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public Persona(String nombre, int edad, double estatura) {
+		this.nombre = nombre;
+		this.edadPersona = edad;
+		this.estatura = estatura;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}

@@ -6,6 +6,11 @@ public class TestPersona {
 		Persona p;// 1. Declaro una variable llamada p de tipo persona
 		p = new Persona();// 2. Crear un objeto Persona,p referencia apunta al objeto
 		Persona p2 = new Persona();
+		Persona p3= new Persona("Brayan");
+		Persona p4 = new Persona("Brayan,17,1.73");
+		System.out.println("nombre: " + p4.getNombre());
+		System.out.println("nombre: " + p4.getEdadPersona());
+		System.out.println("nombre: " + p4.getEstatura());
 
 		// 3. Accedo a los atributos
 		p.setNombre("Gabi");
