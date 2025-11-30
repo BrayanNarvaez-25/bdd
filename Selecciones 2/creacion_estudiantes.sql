@@ -7,28 +7,27 @@ create table estudiantes(
 	constraint cedula_pk primary key(cedula)
 );
 
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1235476801,'Raul','Martínez','raumart01@gmail.com','04/02/2003');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1735476802,'Mario','Guaman','MarioG25@gmail.com', '08/12/2000');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1235476803,'Roberto','Quishpe','RobQuishpe64@gmail.com','29/06/2005');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1735476804,'Paul','Noguera','PaulNog55@gmail.com','22/07/2002');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1235476805,'Marcelo','Ramos','MarceloR72@gmail.com','15/08/2008');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1735476806,'Anthony','Agual','KAgual22@gmail.com','25/03/2002');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1235476807,'Paula','Celi','PauCeli31@gmail.com','30/09/2010' );
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1735476808,'Mónica','Martínez','MoniMar15@gmail.com','22/01/2001');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1235476809,'Anabel','Perlaza','WPerlaza18@gmail.com','12/04/2000');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1735476810,'Sofía','Jimenez','SofiJz22@gmail.com','22/01/2001');
-insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento)
-values (1835326810,'Sofía','Jimenez','SofiJz22@gmail.com','22/01/2001');
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (1235476801,'Raul','Martínez','raumart01@gmail.com','04/02/2003',1);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (1292192919,'Raul','Martínez','raumart01@gmail.com','04/02/2003',2);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (3838238882,'Raul','Martínez','raumart01@gmail.com','04/02/2003',3);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (9492839293,'Raul','Martínez','raumart01@gmail.com','04/02/2003',4);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (0499939393,'Raul','Martínez','raumart01@gmail.com','04/02/2003',5);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (5837489458,'Raul','Martínez','raumart01@gmail.com','04/02/2003',6);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (3245232423,'Raul','Martínez','raumart01@gmail.com','04/02/2003',7);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (4546343523,'Raul','Martínez','raumart01@gmail.com','04/02/2003',8);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (5436554533,'Raul','Martínez','raumart01@gmail.com','04/02/2003',9);
+insert into estudiantes (cedula,nombre,apellido,email,fecha_nacimiento,codigo_profesor)
+values (6576534543,'Raul','Martínez','raumart01@gmail.com','04/02/2003',10);
+
 
 select * from estudiantes
 
@@ -40,3 +39,47 @@ where cedula like '18%' and cedula like '%32%'
 
 select nombre,apellido from estudiantes 
 where cedula like '%06' or cedula like '17%'
+
+create table profesores(
+	codigo int,
+	nombre varchar(50) not null,
+	constraint codigo_pk primary key(codigo)
+)
+
+alter table estudiantes
+add column codigo_profesor int
+
+alter table estudiantes 
+add constraint profesores_estudiantes_fk
+foreign key (codigo_profesor)
+references profesores(codigo)
+
+insert into profesores(codigo,nombre)
+values(1,'Francisco');
+
+insert into profesores(codigo,nombre)
+values(2,'Pepe');
+
+insert into profesores(codigo,nombre)
+values(3,'Juan');
+
+insert into profesores(codigo,nombre)
+values(4,'Leo');
+
+insert into profesores(codigo,nombre)
+values(5,'Diego');
+
+insert into profesores(codigo,nombre)
+values(6,'Pedro');
+
+insert into profesores(codigo,nombre)
+values(7,'Manuela');
+
+insert into profesores(codigo,nombre)
+values(8,'Maria');
+
+insert into profesores(codigo,nombre)
+values(9,'Ana');
+
+insert into profesores(codigo,nombre)
+values(10,'Martha');

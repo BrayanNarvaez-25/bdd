@@ -11,7 +11,7 @@ insert into videojuegos(codigo, nombre, descripcion, valoracion)
 values(07563, 'Call of Duty', 'juego de terror', 9);
 
 insert into videojuegos(codigo, nombre, descripcion, valoracion)
-values(85421, 'Free Fire', 'juego de accion', 7);
+values(85421, 'Free Fire', 'juego de guerra', 7);
 
 insert into videojuegos(codigo, nombre, descripcion, valoracion)
 values(93475, 'Call of Clans', 'juego de terror', 10);
@@ -54,3 +54,47 @@ where (descripcion = 'juego de guerra'
 and valoracion > 7 and nombre like 'C%')
 or (descripcion = 'juego de guerra'
 and valoracion > 8 and nombre like 'D%')
+
+create table plataformas(
+	id_plataforma int,
+	nombre_plataforma varchar(50) not null,
+	codigo_videojuego int,
+	constraint id_plataforma_pk primary key (id_plataforma)
+)
+
+alter table plataformas
+add constraint videojuegos_plataformas_fk
+foreign key (codigo_videojuego)
+references videojuegos(codigo)
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(11,'PlayStation 5',07563);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(12,'PlayStation 5',85421);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(13,'PlayStation 5',93475);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(14,'PlayStation 5',15983);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(15,'PlayStation 5',35784);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(16,'PlayStation 5',54682);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(17,'PlayStation 5',01456);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(18,'PlayStation 5',70215);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(19,'PlayStation 5',63240);
+
+insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
+values(20,'PlayStation 5',63549);
+
+select * from plataformas
