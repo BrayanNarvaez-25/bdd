@@ -101,3 +101,32 @@ personas pe, prestamo pr
 where 
 pe.cedula = pr.cedula and
 pe.nombre = 'Sean'
+
+select count(nombre) from personas
+
+select count(per.cedula)
+from personas per, prestamo pr
+where pr.cedula = per.cedula
+
+select * from personas
+
+select AVG(estatura) from personas
+select AVG(cast(cantidad_ahorrada as numeric))
+from personas
+
+select AVG(cast(cantidad_ahorrada as numeric))
+from personas per, prestamo pr
+where pr.cedula = per.cedula
+
+select sum(estatura) from personas
+select max(estatura) from personas
+select min(estatura) from personas
+
+select estatura, sum(estatura) from personas
+group by estatura
+
+select cedula, sum(monto) from prestamo
+group by cedula
+
+select count(cedula) from personas
+where numero_hijos > 1

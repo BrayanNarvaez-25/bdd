@@ -107,3 +107,10 @@ transacciones tr, banco ba
 where 
 tr.codigo = ba.codigo_banco and
 ba.codigo_transaccion = 1
+
+select count(codigo) from transacciones
+where tipo = 'C'
+
+select numero_cuenta,round(avg(cast(monto as numeric)),2) 
+as monto_promedio from transacciones 
+group by numero_cuenta

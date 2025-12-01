@@ -113,3 +113,10 @@ plataformas pl, videojuegos vi
 where 
 pl.codigo_videojuego = vi.codigo and
 vi.nombre = 'God of Ward'
+
+select codigo_videojuego, count(id_plataforma) from plataformas
+group by codigo_videojuego
+
+select round(avg(valoracion),2) 
+as valoracion_promedio
+from videojuegos

@@ -93,3 +93,10 @@ select * from
 profesores pr, estudiantes es
 where 
 pr.nombre = 'Francisco'
+
+select pr.codigo, count(es.cedula) 
+from profesores pr, estudiantes es
+group by pr.codigo
+
+select round(avg(EXTRACT(YEAR FROM CURRENT_DATE)-EXTRACT(YEAR FROM fecha_nacimiento)))
+as edad_promedio from estudiantes

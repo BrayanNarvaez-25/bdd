@@ -93,3 +93,13 @@ clientes cl, compras co
 where 
 cl.nombre = 'Monica' and 
 co.cedula = cl.cedula
+
+select cl.cedula,sum(co.monto) 
+from compras co, clientes cl
+group by (cl.cedula)
+
+select co.fecha_compra, count(co.fecha_compra) 
+from compras co, clientes cl
+where co.fecha_compra = '04/12/2025'
+group by(co.fecha_compra)
+

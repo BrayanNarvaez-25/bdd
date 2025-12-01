@@ -90,3 +90,10 @@ select * from
 cuentas cu, usuario us
 where
 fecha_creacion between '21/09/2022' and '21/09/2023'
+
+select avg(cast(saldo as numeric)) from cuentas
+where cedula_propietario = '17504'
+
+select us.tipo_cuenta,count(cu.numero_cuenta) 
+from cuentas cu, usuario us
+group by(us.tipo_cuenta)
