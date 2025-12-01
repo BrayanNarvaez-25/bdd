@@ -95,3 +95,15 @@ values(9,9,'');
 
 insert into banco(codigo_banco,codigo_transaccion,detalle)
 values(10,10,'');
+
+select * from
+transacciones tr, banco ba
+where 
+tr.tipo = 'C' and 
+tr.numero_cuenta between '22001' and '22004'
+
+select * from 
+transacciones tr, banco ba
+where 
+tr.codigo = ba.codigo_banco and
+ba.codigo_transaccion = 1

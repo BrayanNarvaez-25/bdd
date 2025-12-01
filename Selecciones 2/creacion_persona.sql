@@ -13,7 +13,7 @@ create table personas(
 alter table prestamo
 add constraint personas_prestamo_fk
 foreign key(cedula)
-references persona(cedula)
+references personas(cedula)
 
 insert into personas(cedula,nombre,apellido,estatura,fecha_nacimiento,hora_nacimiento,cantidad_ahorrada,numero_hijos)
 values('1922939482','Sean','Suárez',1.70,'09/12/2025','5:30',500,0);
@@ -83,3 +83,21 @@ values('6543454356',500,'09/12/2025','5:30','Amigo');
 
 insert into prestamo(cedula,monto,fecha_prestamo,hora_prestamo,garante)
 values('8763457886',500,'09/12/2025','5:30','Amigo');
+
+
+select pe.cedula,pe.nombre,apellido,pr.cedula from
+personas pe, prestamo pr
+where 
+pe.cedula = pr.cedula
+and nombre like 'S%'
+
+select pe.cantidad_ahorrada, pr.monto,pr.garante from
+personas pe, prestamo pr
+where
+pr.monto >= money(100) and pr.monto <= money(1000)
+
+select * from
+personas pe, prestamo pr
+where 
+pe.cedula = pr.cedula and
+pe.nombre = 'Sean'

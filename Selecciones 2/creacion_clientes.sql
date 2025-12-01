@@ -82,3 +82,19 @@ insert into compras(id_compra,cedula,fecha_compra,monto)
 values(10,'2143472234','04/12/2025',6);
 
 select * from compras
+
+select cl.nombre,cl.apellido from
+clientes cl, compras co
+where
+cl.cedula like '%7%'
+
+select * from 
+clientes cl, compras co
+where
+cl.nombre 
+
+select * from
+clientes cl, compras co
+where 
+cl.nombre = 'Monica' and 
+co.cedula = cl.cedula

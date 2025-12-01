@@ -80,3 +80,13 @@ insert into usuario (cedula,nombre,apellido,tipo_cuenta,limite_credito)
 values (17503,'Brayan','Narváez','C',5);
 insert into usuario (cedula,nombre,apellido,tipo_cuenta,limite_credito)
 values (17092,'Brayan','Narváez','C',5);
+
+select cu.numero_cuenta,us.nombre from
+cuentas cu, usuario us
+where
+saldo >= money(100) and saldo <= money(1000)
+
+select * from
+cuentas cu, usuario us
+where
+fecha_creacion between '21/09/2022' and '21/09/2023'

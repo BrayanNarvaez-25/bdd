@@ -86,3 +86,14 @@ select * from ventas
 
 delete from productos
 delete from ventas
+
+select pr.nombre, pr.stock, ve.cantidad from
+productos pr, ventas ve
+where
+pr.nombre like '%m%' or
+pr.descripcion = '0'
+
+select pr.nombre, pr.stock from
+productos pr, ventas ve
+where
+pr.codigo = 5

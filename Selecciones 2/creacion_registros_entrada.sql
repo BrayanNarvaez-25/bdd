@@ -101,3 +101,18 @@ values(7554,'Pepe','04/02/2025','9:00');
 
 insert into empleado(codigo_empleado,nombre,fecha,hora)
 values(7544,'Pepe','04/02/2025','9:00');
+
+select re.cedula_empleado, em.fecha, em.nombre from
+empleado em, registros_entrada re
+where
+(re.fecha between '01/08/2023' and '31/08/2023') or
+(re.cedula_empleado like '17%' and 
+em.hora between '8:00' and '12:00') or 
+(em.fecha between '06/10/2023' and '20/10/2023') or
+(re.cedula_empleado like '08%' and
+re.hora between '9:00' and '13:00')
+
+select * from empleado em
+join registros_entrada re on em.codigo_empleado = re.codigo_empleado
+where
+re.cedula_empleado = '2201';

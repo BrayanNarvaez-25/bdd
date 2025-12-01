@@ -83,3 +83,13 @@ values(9,'Ana');
 
 insert into profesores(codigo,nombre)
 values(10,'Martha');
+
+select pr.codigo, es.nombre, es.apellido from
+profesores pr, estudiantes es
+where
+es.apellido like '%n%'
+
+select * from
+profesores pr, estudiantes es
+where 
+pr.nombre = 'Francisco'

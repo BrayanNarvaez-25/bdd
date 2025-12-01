@@ -98,3 +98,18 @@ insert into plataformas(id_plataforma,nombre_plataforma,codigo_videojuego)
 values(20,'PlayStation 5',63549);
 
 select * from plataformas
+
+select vi.nombre, vi.descripcion, vi.valoracion,pl.nombre_plataforma from
+plataformas pl, videojuegos vi
+where 
+(vi.descripcion = 'juego de guerra' and
+vi.valoracion > 7) or
+(vi.nombre like 'C%' and
+vi.valoracion > 8 or
+vi.nombre like 'D%')
+
+select * from 
+plataformas pl, videojuegos vi
+where 
+pl.codigo_videojuego = vi.codigo and
+vi.nombre = 'God of Ward'
