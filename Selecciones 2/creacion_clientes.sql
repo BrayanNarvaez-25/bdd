@@ -88,11 +88,6 @@ clientes cl, compras co
 where
 cl.cedula like '%7%'
 
-select * from 
-clientes cl, compras co
-where
-cl.nombre 
-
 select * from
 clientes cl, compras co
 where 
