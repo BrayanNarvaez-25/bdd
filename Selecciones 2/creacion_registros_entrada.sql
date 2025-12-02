@@ -116,3 +116,7 @@ select * from empleado em
 join registros_entrada re on em.codigo_empleado = re.codigo_empleado
 where
 re.cedula_empleado = '2201';
+
+select cedula, count(codigo_registro) 
+from registros_entrada
+group by registros_entrada
