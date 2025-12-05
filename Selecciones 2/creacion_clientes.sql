@@ -42,8 +42,8 @@ create table compras(
 	id_compra int not null,
 	cedula char(10) not null,
 	fecha_compra DATE not null,
-	monto DECIMAL(10,2),
-	constraint id_compra_pk primary key(id_compra)
+	monto money,
+	constraint cedula_pk primary key(cedula)
 );
 
 alter table compras
@@ -103,3 +103,7 @@ from compras co, clientes cl
 where co.fecha_compra = '04/12/2025'
 group by(co.fecha_compra)
 
+select * from
+clientes cl, compras co
+
+delete from compras where cedula = '1727392035'

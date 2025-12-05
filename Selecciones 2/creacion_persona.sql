@@ -130,3 +130,6 @@ group by cedula
 
 select count(cedula) from personas
 where numero_hijos > 1
+
+select * from personas
+delete from personas where cedula = '1727392035'
