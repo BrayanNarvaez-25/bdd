@@ -1,12 +1,8 @@
 package com.krakedev.test;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.krakedev.entidades.Clientes;
 import com.krakedev.entidades.Compras;
 import com.krakedev.servicios.AdminClientes;
-import com.krakedev.utils.Convertidor;
 
 public class TestAdminClientes {
 

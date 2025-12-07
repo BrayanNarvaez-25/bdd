@@ -13,6 +13,11 @@ public class Clientes {
 				+ "]";
 	}
 
+	public Clientes(String cedula) {
+		super();
+		this.cedula = cedula;
+	}
+
 	public Clientes(String cedula, String nombre, String apellido, Compras compra) {
 		super();
 		this.cedula = cedula;
