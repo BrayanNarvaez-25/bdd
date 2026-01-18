@@ -103,7 +103,6 @@ from compras co, clientes cl
 where co.fecha_compra = '04/12/2025'
 group by(co.fecha_compra)
 
-select * from
-clientes 
+
 
 delete from clientes where cedula = '2939272949'
